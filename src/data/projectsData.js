@@ -1,76 +1,129 @@
 // src/data/projectsData.js
+// Dados dos projetos com estrutura de blocos dinâmicos
 
 export const projectCategoryColors = {
   "Todos": { hex: "#22c55e", bg: "bg-green-500/10", text: "text-green-300" },
-  // Categoria principal para sistemas completos (React + Node/Java)
   "Web Full Stack": { hex: "#60a5fa", bg: "bg-blue-500/10", text: "text-blue-300" },
-  // Categoria para coisas "sem tela" ou hardware (APIs, Scripts, Sensores)
   "IoT & Integrações": { hex: "#a78bfa", bg: "bg-violet-500/10", text: "text-violet-300" },
 };
 
 export const projectsData = [
   {
-    id: "sap-predial", // IDs descritivos são melhores para SEO/URLs
+    id: "sap-predial",
     title: "Sistema de Automação Predial",
-    category: "Web Full Stack", // Mudamos de "Front End" para a realidade
+    category: "Web Full Stack",
     
-    // Resumo para o card
+    // === DADOS DO CARD (sempre visível na home) ===
     description: "Sistema completo para gestão de edifícios, permitindo acionamento remoto de hardware (luzes, ar-condicionado) e relatórios de consumo.",
+    tech: ["React", "Vite", "Node-RED", "MQTT", "Raspberry Pi"],
+    image: "src/assets/projects/sap/imagem-02.png",
     
-    tech: ["React", "Tailwind", "Node.js", "WebSocket"], 
-    image: "/projects/sap.png",
     links: {
-      github: "https://github.com/seuuser/checktrampo-dashboard",
-      live: "https://seu-deploy.com/checktrampo",
+      github: "https://github.com/seuuser/sap-predial",
+      live: "https://sap-demo.vercel.app",
     },
+    
     featured: true,
 
-    // NOVO: Objeto para a página de detalhes ("quando abrisse o post")
     details: {
-      about: "Este projeto nasceu da necessidade de centralizar o controle de dispositivos dispersos em grandes edifícios. O desafio principal foi garantir que o comando enviado pela interface web chegasse ao hardware em tempo real.",
-      features: [
-        "Dashboard interativo com status em tempo real (via WebSocket).",
-        "Módulo de agendamento de tarefas (ligar ar-condicionado às 08:00).",
-        "Sistema de permissões (Administrador vs Usuário Comum).",
-        "Relatórios exportáveis de tempo de uso dos equipamentos."
-      ],
-      challenges: "A maior dificuldade foi lidar com a instabilidade da rede local dos dispositivos. Implementei um sistema de 'heartbeat' para que o painel saiba instantaneamente se um dispositivo ficou offline.",
-      stackDetails: {
-        frontend: "React com Context API para gerenciamento de estado global.",
-        backend: "Node.js servindo como broker entre o cliente e os controladores físicos.",
-        database: "PostgreSQL para logs e usuários."
-      }
+      content: [
+        {
+          type: "text",
+          value: "Tela de Login: Aqui temos uma tela de login para acesso ao sistema, onde por trás roda um servidor nodejs responsável pela gestão dos usuários e pelo acesso ao seu determinado condominio."
+        },
+        {
+          type: "image",
+          src: "src/assets/projects/sap/imagem-01.png",
+          caption: "Visão geral da interface do sistema"
+        },
+        {
+          type: "text",
+          value: "Esse sistema foi arquitetado em camadas, por ser um sistema de automação, temos a interface gráfica feita em Vite + React e o seu back-end alocado em um servidor local com o backend em Node-red que faz a comunicação com os módulos via MQTT, efetivando os acionamentos.\n\nSistema possui tela para acionamento dos espaços de iluminação, exaustores e áreas com ar condicionados."
+        },
+        {
+          type: "image",
+          src: "/projects/sap-acionamentos.png",
+          caption: "Tela de acionamentos dos dispositivos"
+        },
+        {
+          type: "text",
+          value: "Sistema de monitoramento de nível de caixa d'água"
+        },
+        {
+          type: "image",
+          src: "/projects/sap-caixa.png",
+          caption: "Monitoramento em tempo real da caixa d'água"
+        },
+        {
+          type: "text",
+          value: "Agendamento de acionamentos"
+        },
+        {
+          type: "image",
+          src: "/projects/sap-agenda.png",
+          caption: "Sistema de agendamento automatizado"
+        },
+        {
+          type: "text",
+          value: "Tela de relatórios de atividades"
+        },
+        {
+          type: "image",
+          src: "/projects/sap-relatorios.png",
+          caption: "Relatórios detalhados de consumo e uso"
+        }
+      ]
     }
   },
+
   {
     id: "device-monitor",
-    title: "Monitor de Rede & Alertas", // Nome mais comercial
-    category: "IoT & Integrações", // Se encaixa melhor que "Full Stack" genérico
+    title: "Monitor de Rede & Alertas",
+    category: "IoT & Integrações",
     
     description: "Agente inteligente que vigia a estabilidade de dispositivos críticos na rede e notifica quedas via WhatsApp e E-mail.",
+    tech: ["Node.js", "WhatsApp API", "Network Protocols", "Fastify"],
+    image: "/projects/monitor-thumb.png",
     
-    tech: ["Node.js", "WhatsApp API", "Network Protocols"],
-    image: "/projects/deviceMonitor.png",
     links: {
-      github: "https://github.com/seuuser/whatsapp-ai-agent",
-      // Se não tiver live (por ser backend/local), pode remover ou por um demo
-      live: null, 
+      github: "https://github.com/seuuser/device-monitor",
+      live: null,
     },
+    
     featured: false,
 
     details: {
-      about: "Solução focada em Provedores de Internet e TI interna. O objetivo é reduzir o tempo de resposta (Downtime) avisando os técnicos antes que o cliente final reclame.",
-      features: [
-        "Monitoramento via ICMP (Ping) e verificação de portas TCP.",
-        "Disparo de mensagens automáticas no WhatsApp do técnico responsável.",
-        "Logs de instabilidade para auditoria de SLA.",
-        "Interface web leve para cadastro de IPs a monitorar."
-      ],
-      challenges: "Evitar falsos positivos. Foi criado um algoritmo de 'debouncing' que só alerta após X falhas consecutivas, evitando spam quando a rede apenas oscila.",
-      stackDetails: {
-        backend: "Node.js com Fastify para alta performance.",
-        integrations: "Baileys (Lib de WhatsApp) e Nodemailer."
-      }
+      content: [
+        {
+          type: "text",
+          value: "Solução focada em Provedores de Internet e equipes de TI interna. O objetivo é reduzir o tempo de resposta (downtime) avisando os técnicos antes que o cliente final reclame."
+        },
+        {
+          type: "image",
+          src: "/projects/monitor-dashboard.png",
+          caption: "Dashboard de monitoramento em tempo real"
+        },
+        {
+          type: "text",
+          value: "O sistema monitora dispositivos via ICMP (Ping) e verificação de portas TCP. Quando detecta uma falha, dispara mensagens automáticas no WhatsApp do técnico responsável.\n\nImplementei um algoritmo de 'debouncing' inteligente: o sistema só dispara o alerta após 3 falhas consecutivas em um intervalo de 2 minutos. Isso reduziu em 90% os falsos positivos."
+        },
+        {
+          type: "image",
+          src: "/projects/monitor-alerts.png",
+          caption: "Sistema de alertas via WhatsApp"
+        },
+        {
+          type: "text",
+          value: "Interface web leve para cadastro de IPs e configuração de alertas personalizados por dispositivo."
+        },
+        {
+          type: "image",
+          src: "/projects/monitor-config.png",
+          caption: "Painel de configuração de dispositivos"
+        }
+      ]
     }
   },
+
+  // Adicione mais projetos seguindo o mesmo padrão...
 ];

@@ -19,7 +19,7 @@ const ConnectorLine = ({ fromColor, toColor, isLast }) => {
       viewport={{ once: true }}
       transition={{ 
         duration: 0.8, 
-        delay: 0.2, 
+        delay: 0.5, 
         ease: [0.22, 1, 0.36, 1] 
       }}
       style={{ 

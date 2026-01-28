@@ -165,12 +165,6 @@ const ProjectCard = ({ project, isHovered, onHoverStart, onHoverEnd, colors, onO
               >
                 <GitHubIcon />
                 GitHub
-                <motion.span
-                  animate={{ x: [0, 3, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                  →
-                </motion.span>
               </motion.a>
             )}
 
@@ -189,12 +183,6 @@ const ProjectCard = ({ project, isHovered, onHoverStart, onHoverEnd, colors, onO
               >
                 <ExternalLinkIcon />
                 Deploy
-                <motion.span
-                  animate={{ x: [0, 3, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                  →
-                </motion.span>
               </motion.a>
             )}
           </div>
