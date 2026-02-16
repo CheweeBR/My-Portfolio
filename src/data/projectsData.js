@@ -118,7 +118,7 @@ export const projectsData = [
     
     description: "Agente inteligente que vigia a estabilidade de dispositivos críticos na rede e notifica quedas via WhatsApp e E-mail.",
     tech: ["Node.js", "WhatsApp API", "Network Protocols", "Fastify"],
-    image: "/projects/monitor-thumb.png",
+    image: "src/assets/projects/monitor-thumb.png",
     
     links: {
       github: "https://github.com/seuuser/device-monitor",
@@ -135,7 +135,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "/projects/monitor-dashboard.png",
+          src: "src/assets/projects/monitor-dashboard.png",
           caption: "Dashboard de monitoramento em tempo real"
         },
         {
@@ -144,7 +144,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "/projects/monitor-alerts.png",
+          src: "src/assets/projects/monitor-alerts.png",
           caption: "Sistema de alertas via WhatsApp"
         },
         {
@@ -153,7 +153,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "/projects/monitor-config.png",
+          src: "src/assets/projects/monitor-config.png",
           caption: "Painel de configuração de dispositivos"
         }
       ]
@@ -165,7 +165,7 @@ export const projectsData = [
     category: "Web Full Stack",
     description: "Plataforma de gerenciamento de tarefas e acompanhamento de atividades para equipes de trabalho presencial, gerando relatórios de produtividade e desempenho e podendo definir metas de atividades.",
     tech: ["React", "Vite", "Node.js", "NestJS", "PostgreSQL", "TypeScript"],
-    image: "/projects/checktrampo-thumb.png",
+    image: "src/assets/projects/check-trampo/imagem-02.png",
     links: {
       live: "https://check-trampo.com/",
       github: "",
@@ -175,16 +175,42 @@ export const projectsData = [
       content: [
         {
           type: "text",
-          value: "O CheckTrampo é uma plataforma web full stack desenvolvida para otimizar o gerenciamento de tarefas e o acompanhamento de atividades em ambientes de trabalho presencial. A aplicação foi construída utilizando React com Vite no frontend, proporcionando uma interface rápida e responsiva, enquanto o backend foi desenvolvido com Node.js e NestJS, garantindo uma arquitetura robusta e escalável. O banco de dados PostgreSQL foi escolhido para armazenar de forma eficiente os dados relacionados a usuários, tarefas e relatórios."
+          value: "O CheckTrampo é um SAAS plataforma web full stack desenvolvida para otimizar o gerenciamento de tarefas e o acompanhamento de atividades em ambientes de trabalho presencial. A aplicação foi construída utilizando React com Vite no frontend, proporcionando uma interface rápida e responsiva, enquanto o backend foi desenvolvido com Node.js e NestJS, garantindo uma arquitetura robusta e escalável. O banco de dados PostgreSQL foi escolhido para armazenar de forma eficiente os dados relacionados a usuários, tarefas e relatórios."
         },
         {
           type: "image",
-          src: "/projects/checktrampo-dashboard.png",
-          caption: "Dashboard principal do CheckTrampo"
+          src: "src/assets/projects/check-trampo/imagem-01.png",
+          caption: "Tela de login"
         },
         {
           type: "text",
-          value: "A plataforma permite que os usuários criem e gerenciem tarefas, atribuam responsabilidades e acompanhem o progresso em tempo real. Além disso, o CheckTrampo gera relatórios detalhados de produtividade e desempenho, permitindo que as equipes definam metas de atividades e monitorem seu cumprimento. A interface intuitiva e as funcionalidades avançadas tornam o CheckTrampo uma ferramenta essencial para melhorar a eficiência e a colaboração em ambientes de trabalho presencial."
+          value: "A tela de Login foi projetada para ser simples e intuitiva, permitindo que os usuários acessem suas contas de forma rápida. O sistema de autenticação é seguro, utilizando JWT para gerenciamento de sessões e garantindo a proteção dos dados dos usuários."
+        },
+        {
+          type: "image",
+          src: "src/assets/projects/check-trampo/imagem-02.png",
+          caption: "Dashboard administrativo"
+        },
+        {
+          type: "text",
+          value: "O Dashboard Administrativo é o coração do CheckTrampo, onde os gestores podem criar serviços e suas respectivas atividades, administradores podem criar clientes e usuários, acompanhar o progresso das atividades e gerar relatórios detalhados de produtividade."
+        },
+        {
+          type: "text",
+          value: "A interface é projetada para ser intuitiva, permitindo que os gestores tenham uma visão clara do desempenho da equipe e possam tomar decisões informadas para melhorar a eficiência."
+        },
+        {
+          type: "text",
+          value: "o sistema conta com diferenciação de roles, onde cada role tem permissão de acesso restrita, garantindo a segurança e a integridade dos dados. Os gerentes têm acesso completo para criar e gerenciar serviços, atividades e usuários, enquanto supervisores, podem apenas criar metas e envia-las aos tecnicos e os tecnicos apenas suas tarefas e relatórios de desempenho."  
+        },
+        {
+          type: "image",
+          src: "src/assets/projects/check-trampo/imagem-03.png",
+          caption: "Tela principal do técnico - clientes"
+        },
+        {
+          type: "text",
+          value: "A tela principal do técnico apresenta de forma intuitiva os clientes e ao selecionar um cliente, o técnico tem acesso às soluções vendidas a cada cliente." 
         }
       ]
     }

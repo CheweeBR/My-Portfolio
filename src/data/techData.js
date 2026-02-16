@@ -31,6 +31,7 @@ export const techLinks = {
   // Frameworks
   "Fastify": "https://fastify.dev/docs/latest/",
   "Express.js": "https://expressjs.com/",
+  "nestJS": "https://docs.nestjs.com/",
   // Frontend
   "React": "https://react.dev/",
   "Vite": "https://vitejs.dev/guide/",
@@ -77,6 +78,7 @@ export const categoriesData = [
     borderColor: 'border-indigo-500/20 hover:border-indigo-500/40',
     techs: [
       { name: 'Fastify', colorClass: 'border-white text-white bg-white/10' },
+      { name: 'nestJS', colorClass: 'border-red-500 text-red-400 bg-red-500/10' },
       { name: 'Express.js', colorClass: 'border-slate-400 text-slate-300 bg-slate-400/10' }
     ]
   },
