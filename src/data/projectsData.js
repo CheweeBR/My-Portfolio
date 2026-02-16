@@ -19,58 +19,93 @@ export const projectsData = [
     image: "src/assets/projects/sap/imagem-02.png",
     
     links: {
-      github: "https://github.com/seuuser/sap-predial",
-      live: "https://sap-demo.vercel.app",
+      github: "",
+      live: "https://acesso-cmd-automacao.vercel.app/",
     },
     
     featured: true,
 
-    details: {
+ details: {
       content: [
         {
           type: "text",
-          value: "Tela de Login: Aqui temos uma tela de login para acesso ao sistema, onde por trás roda um servidor nodejs responsável pela gestão dos usuários e pelo acesso ao seu determinado condominio."
+          value: "O sistema utiliza uma arquitetura em camadas para garantir escalabilidade e performance. O Client-side foi desenvolvido em React com Vite, proporcionando uma interface gráfica otimizada. O Server-side opera localmente utilizando Node-RED para orquestração dos fluxos de automação e protocolo MQTT para comunicação M2M (Machine-to-Machine) de baixa latência com os módulos de hardware, centralizando o controle de iluminação, exaustão e climatização."
         },
         {
           type: "image",
           src: "src/assets/projects/sap/imagem-01.png",
-          caption: "Visão geral da interface do sistema"
+          caption: "Tela de login do sistema"
         },
         {
           type: "text",
-          value: "Esse sistema foi arquitetado em camadas, por ser um sistema de automação, temos a interface gráfica feita em Vite + React e o seu back-end alocado em um servidor local com o backend em Node-red que faz a comunicação com os módulos via MQTT, efetivando os acionamentos.\n\nSistema possui tela para acionamento dos espaços de iluminação, exaustores e áreas com ar condicionados."
-        },
-        {
-          type: "image",
-          src: "/projects/sap-acionamentos.png",
-          caption: "Tela de acionamentos dos dispositivos"
+          value: "A segurança é gerenciada por um servidor Express integrado a um banco de dados em nuvem. O módulo de autenticação realiza o gerenciamento de identidade, controle de acesso e validação de permissões através da emissão de tokens seguros."
         },
         {
           type: "text",
-          value: "Sistema de monitoramento de nível de caixa d'água"
-        },
-        {
-          type: "image",
-          src: "/projects/sap-caixa.png",
-          caption: "Monitoramento em tempo real da caixa d'água"
+          value: "Implementa um fluxo seguro de recuperação de credenciais (Password Recovery), validando a existência do usuário na base e disparando códigos de verificação (OTP) via e-mail transacional para redefinição de acesso."
         },
         {
           type: "text",
-          value: "Agendamento de acionamentos"
+          value: "O processo de onboarding conta com validação administrativa. O usuário solicita o cadastro e o administrador do condomínio realiza a aprovação ou recusa. Mediante aceite, o sistema provisiona as credenciais e notifica o usuário automaticamente via e-mail."
         },
         {
           type: "image",
-          src: "/projects/sap-agenda.png",
-          caption: "Sistema de agendamento automatizado"
+          src: "src/assets/projects/sap/imagem-02.png",
+          caption: "Tela de acionamentos de iluminação"
         },
         {
           type: "text",
-          value: "Tela de relatórios de atividades"
+          value: "Módulo de controle de iluminação com atuação em tempo real (Real-Time Actuation). O sistema suporta a gestão de múltiplos ambientes simultâneos. A visualização acima demonstra a aplicação em ambiente de produção (térreo condominial) com feedback instantâneo de estado."
         },
         {
           type: "image",
-          src: "/projects/sap-relatorios.png",
-          caption: "Relatórios detalhados de consumo e uso"
+          src: "src/assets/projects/sap/imagem-03.png",
+          caption: "Tela de acionamento de exaustores"
+        },
+        {
+          type: "text",
+          value: "Gerenciamento de exaustores com controle de estado binário e telemetria em tempo real. Inclui funcionalidade de parametrização de temporizadores (Timers) para automação dos ciclos de funcionamento dos equipamentos."
+        },
+        {
+          type: "image",
+          src: "src/assets/projects/sap/imagem-04.png",
+          caption: "Tela de seleção de ambiente para ar-condicionado"
+        },
+        {
+          type: "image",
+          src: "src/assets/projects/sap/imagem-04.1.png",
+          caption: "Tela de acionamento de ar-condicionado"
+        },
+        {
+          type: "text",
+          value: "Controle centralizado de climatização (HVAC). Permite a seleção setorizada de ambientes e o monitoramento do status operacional dos aparelhos de ar-condicionado em tempo real."
+        },
+        {
+          type: "image",
+          src: "src/assets/projects/sap/imagem-05.png",
+          caption: "Tela de agendamento diário de exaustores e iluminação"
+        },
+        {
+          type: "text",
+          value: "Sistema de agendamento de tarefas (Scheduling) para automação de rotinas. Permite a configuração de triggers horários por ambiente para ativação e desativação automática de iluminação e exaustores."
+        },
+        {
+          type: "image",
+          src: "src/assets/projects/sap/imagem-06.png",
+          caption: "Tela de monitoramento de alarme de caixa d'água"
+        },
+        {
+          type: "text",
+          value: "Monitoramento de infraestrutura crítica (Nível de Caixa d'água). O sistema apresenta o status dos sensores em tempo real e integra um sistema de alertas para notificações imediatas em caso de anomalias ou disparo de alarmes."
+        },
+        {
+          type: "image",
+          src: "src/assets/projects/sap/imagem-07.png",
+          caption: "Relatórios e Logs"
+        },
+        {
+          type: "text",
+          value: "Dashboard de observabilidade e auditoria. Centraliza o histórico de eventos (Logs), incluindo disparos de alarmes e registros de acionamentos, além de relatórios de disponibilidade dos dispositivos monitorados."
         }
       ]
     }
@@ -124,6 +159,36 @@ export const projectsData = [
       ]
     }
   },
+  {
+    id: "check-trampo",
+    title: "CheckTrampo",
+    category: "Web Full Stack",
+    description: "Plataforma de gerenciamento de tarefas e acompanhamento de atividades para equipes de trabalho presencial, gerando relatórios de produtividade e desempenho e podendo definir metas de atividades.",
+    tech: ["React", "Vite", "Node.js", "NestJS", "PostgreSQL", "TypeScript"],
+    image: "/projects/checktrampo-thumb.png",
+    links: {
+      live: "https://check-trampo.com/",
+      github: "",
+    },
+    featured: false,
+     details: {
+      content: [
+        {
+          type: "text",
+          value: "O CheckTrampo é uma plataforma web full stack desenvolvida para otimizar o gerenciamento de tarefas e o acompanhamento de atividades em ambientes de trabalho presencial. A aplicação foi construída utilizando React com Vite no frontend, proporcionando uma interface rápida e responsiva, enquanto o backend foi desenvolvido com Node.js e NestJS, garantindo uma arquitetura robusta e escalável. O banco de dados PostgreSQL foi escolhido para armazenar de forma eficiente os dados relacionados a usuários, tarefas e relatórios."
+        },
+        {
+          type: "image",
+          src: "/projects/checktrampo-dashboard.png",
+          caption: "Dashboard principal do CheckTrampo"
+        },
+        {
+          type: "text",
+          value: "A plataforma permite que os usuários criem e gerenciem tarefas, atribuam responsabilidades e acompanhem o progresso em tempo real. Além disso, o CheckTrampo gera relatórios detalhados de produtividade e desempenho, permitindo que as equipes definam metas de atividades e monitorem seu cumprimento. A interface intuitiva e as funcionalidades avançadas tornam o CheckTrampo uma ferramenta essencial para melhorar a eficiência e a colaboração em ambientes de trabalho presencial."
+        }
+      ]
+    }
+  }
 
   // Adicione mais projetos seguindo o mesmo padrão...
 ];

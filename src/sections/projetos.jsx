@@ -44,13 +44,16 @@ export default function Projetos() {
     <section id="projetos" className="w-full py-20 md:py-2">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         {/* Header */}
+        {!modalOpen && (
+
+
         <div className="mb-10 md:mb-12">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl font-black text-white tracking-tight text-center"
+            className="text-3xl md:text-5xl m-1 font-black text-white tracking-tight text-center"
           >
             Meus{" "}
             <span className="bg-gradient-to-r from-green-500 to-emerald-400 bg-clip-text text-transparent">
@@ -58,8 +61,9 @@ export default function Projetos() {
             </span>
           </motion.h2>
         </div>
+        )}
 
-        {/* Filter */}
+        {!modalOpen && (
         <FilterBar
           categories={categories}
           activeCategory={activeCategory}
@@ -70,7 +74,8 @@ export default function Projetos() {
           colors={colors}
         />
 
-        {/* Grid */}
+        )}
+        {!modalOpen && (
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -93,6 +98,7 @@ export default function Projetos() {
             );
           })}
         </motion.div>
+        )}
 
         {/* Empty state */}
         {filtered.length === 0 && (

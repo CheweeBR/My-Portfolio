@@ -32,7 +32,7 @@ export default function ProjectModal({ open, onClose, project }) {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 z-[100] flex items-end md:items-center justify-center p-3 md:p-8"
+        className="flex items-end md:items-center justify-center p-3 md:p-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -40,7 +40,7 @@ export default function ProjectModal({ open, onClose, project }) {
         aria-modal="true"
         role="dialog"
       >
-        <div className="absolute inset-0 bg-black/80" />
+        <div className="bg-black/80" />
 
         <motion.div
           onClick={(e) => e.stopPropagation()}
@@ -48,13 +48,12 @@ export default function ProjectModal({ open, onClose, project }) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.98, y: 12 }}
           className="relative w-full max-w-5xl bg-zinc-950 border border-white/10 rounded-2xl overflow-hidden flex flex-col"
-          style={{ maxHeight: "85vh" }}
         >
           {/* Header */}
           <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
             <div className="min-w-0">
               <h3 className="text-xl font-bold text-white truncate">{project.title}</h3>
-              <p className="text-xs text-slate-400 mt-0.5">{project.category}</p>
+              <p className="text-base text-slate-400 mt-0.5">{project.category}</p>
             </div>
             <button
               onClick={onClose}
@@ -66,7 +65,8 @@ export default function ProjectModal({ open, onClose, project }) {
           </div>
 
           {/* Content */}
-          <div className="flex-1 min-h-0 lg:grid lg:grid-cols-[320px_1fr] overflow-hidden">
+          <div className="flex-1 min-h-0 flex flex-col overflow-hidden">
+
             
             {/* Sidebar - Dados do Card */}
             <div className="lg:border-r border-white/10 p-5 space-y-4 overflow-y-auto">
@@ -74,26 +74,26 @@ export default function ProjectModal({ open, onClose, project }) {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-40 object-cover rounded-xl border border-white/10"
+                  className="rounded-xl overflow-hidden border border-white/10 hover:border-white/20 transition"
                 />
               )}
 
               {project.description && (
-                <p className="text-sm text-slate-300 leading-relaxed">
+                <p className="text-lg text-slate-300 leading-relaxed">
                   {project.description}
                 </p>
               )}
 
               {project.tech?.length > 0 && (
                 <div>
-                  <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
+                  <h4 className="text-base font-semibold text-slate-500 uppercase tracking-wider mb-2">
                     Tecnologias
                   </h4>
                   <div className="flex flex-wrap gap-1.5">
                     {project.tech.map((t) => (
                       <span
                         key={t}
-                        className="text-xs text-slate-300 bg-zinc-800 px-2.5 py-1 rounded-full"
+                        className="text-xm text-slate-300 bg-zinc-800 px-2.5 py-1 rounded-full"
                       >
                         {t}
                       </span>
@@ -108,7 +108,7 @@ export default function ProjectModal({ open, onClose, project }) {
                     href={project.links.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-green-300 bg-green-500/10 hover:bg-green-500/20 transition"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-base font-medium text-green-300 bg-green-500/10 hover:bg-green-500/20 transition"
                   >
                     <ExternalLinkIcon /> Deploy
                   </a>
@@ -118,7 +118,7 @@ export default function ProjectModal({ open, onClose, project }) {
                     href={project.links.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-blue-300 bg-blue-500/10 hover:bg-blue-500/20 transition"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-base font-medium text-blue-300 bg-blue-500/10 hover:bg-blue-500/20 transition"
                   >
                     <GitHubIcon /> GitHub
                   </a>
@@ -127,6 +127,11 @@ export default function ProjectModal({ open, onClose, project }) {
             </div>
 
             {/* Main - Detalhes do Projeto */}
+
+            <div id="detalhes" className="p-5 border-t border-white/10">
+              <h3 className="text-xl font-bold text-white">Detalhes do Projeto</h3>
+            </div>
+
             <div className="p-5 overflow-y-auto space-y-5">
               {project.details?.content?.length > 0 ? (
                 project.details.content.map((block, i) => {
@@ -150,7 +155,7 @@ export default function ProjectModal({ open, onClose, project }) {
                   return null;
                 })
               ) : (
-                <p className="text-slate-500 text-sm">Sem detalhes adicionais.</p>
+                <p className="text-slate-500">Sem detalhes adicionais.</p>
               )}
             </div>
           </div>
