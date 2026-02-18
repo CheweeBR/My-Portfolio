@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { GitHubIcon, ExternalLinkIcon } from "./icons";
 import TextBlock from "./TextBlock";
 import ImageBlock from "./ImageBlock";
+import SectionBlock from "./SectionBlock";
 
 export default function ProjectModal({ open, onClose, project }) {
   const [lightboxSrc, setLightboxSrc] = useState(null);
@@ -138,6 +139,9 @@ export default function ProjectModal({ open, onClose, project }) {
                   if (block.type === "text") {
                     return <TextBlock key={i} value={block.value} />;
                   }
+                  if (block.type === "section") {
+                    return <SectionBlock key={i} value={block} />;
+                  }
                   if (block.type === "image") {
                     return (
                       <button
@@ -152,6 +156,7 @@ export default function ProjectModal({ open, onClose, project }) {
                       </button>
                     );
                   }
+
                   return null;
                 })
               ) : (

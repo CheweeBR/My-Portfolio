@@ -13,6 +13,7 @@ import Timeline from './sections/timeline';
 function App() {
   // Lista centralizada de seções
   const sections = ["Sobre Mim", "Timeline", "Projetos", "Contato"];
+  const [scrollEnabled, setScrollEnabled] = useState(true);
   
   const [activeTab, setActiveTab] = useState("Sobre Mim");
   const [direction, setDirection] = useState(0); // Para saber se o slide vai para esq ou dir
@@ -94,9 +95,8 @@ function App() {
             custom={direction}
             variants={slideVariants}
             
-            // ALTERAÇÃO 2: Atualizamos os nomes aqui para bater com o slideVariants acima
             initial="enter"   
-            animate="visible" // <--- A MÁGICA: O App manda "visible", o SobreMim entende e anima!
+            animate="visible"
             exit="exit"
             
             drag="x"

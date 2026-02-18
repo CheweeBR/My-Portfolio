@@ -14,7 +14,7 @@ export const projectsData = [
     category: "Web Full Stack",
     
     // === DADOS DO CARD (sempre visível na home) ===
-    description: "Sistema completo para gestão de edifícios, permitindo acionamento remoto de hardware (luzes, ar-condicionado) e relatórios de consumo.",
+    description: "Sistema completo para gestão de edifícios, permitindo acionamento remoto de hardware (luzes, exaustores, ar-condicionado) e monitoramento de nivel de caixa d'agua.",
     tech: ["React", "Vite", "Node-RED", "MQTT", "Raspberry Pi"],
     image: "src/assets/projects/sap/imagem-02.png",
     
@@ -112,54 +112,6 @@ export const projectsData = [
   },
 
   {
-    id: "device-monitor",
-    title: "Monitor de Rede & Alertas",
-    category: "IoT & Integrações",
-    
-    description: "Agente inteligente que vigia a estabilidade de dispositivos críticos na rede e notifica quedas via WhatsApp e E-mail.",
-    tech: ["Node.js", "WhatsApp API", "Network Protocols", "Fastify"],
-    image: "src/assets/projects/monitor-thumb.png",
-    
-    links: {
-      github: "https://github.com/seuuser/device-monitor",
-      live: null,
-    },
-    
-    featured: false,
-
-    details: {
-      content: [
-        {
-          type: "text",
-          value: "Solução focada em Provedores de Internet e equipes de TI interna. O objetivo é reduzir o tempo de resposta (downtime) avisando os técnicos antes que o cliente final reclame."
-        },
-        {
-          type: "image",
-          src: "src/assets/projects/monitor-dashboard.png",
-          caption: "Dashboard de monitoramento em tempo real"
-        },
-        {
-          type: "text",
-          value: "O sistema monitora dispositivos via ICMP (Ping) e verificação de portas TCP. Quando detecta uma falha, dispara mensagens automáticas no WhatsApp do técnico responsável.\n\nImplementei um algoritmo de 'debouncing' inteligente: o sistema só dispara o alerta após 3 falhas consecutivas em um intervalo de 2 minutos. Isso reduziu em 90% os falsos positivos."
-        },
-        {
-          type: "image",
-          src: "src/assets/projects/monitor-alerts.png",
-          caption: "Sistema de alertas via WhatsApp"
-        },
-        {
-          type: "text",
-          value: "Interface web leve para cadastro de IPs e configuração de alertas personalizados por dispositivo."
-        },
-        {
-          type: "image",
-          src: "src/assets/projects/monitor-config.png",
-          caption: "Painel de configuração de dispositivos"
-        }
-      ]
-    }
-  },
-  {
     id: "check-trampo",
     title: "CheckTrampo",
     category: "Web Full Stack",
@@ -187,6 +139,10 @@ export const projectsData = [
           value: "A tela de Login foi projetada para ser simples e intuitiva, permitindo que os usuários acessem suas contas de forma rápida. O sistema de autenticação é seguro, utilizando JWT para gerenciamento de sessões e garantindo a proteção dos dados dos usuários."
         },
         {
+          type: "section",
+          title: "Experiência administrativa"
+        },
+        {
           type: "image",
           src: "src/assets/projects/check-trampo/imagem-02.png",
           caption: "Dashboard administrativo"
@@ -204,16 +160,112 @@ export const projectsData = [
           value: "o sistema conta com diferenciação de roles, onde cada role tem permissão de acesso restrita, garantindo a segurança e a integridade dos dados. Os gerentes têm acesso completo para criar e gerenciar serviços, atividades e usuários, enquanto supervisores, podem apenas criar metas e envia-las aos tecnicos e os tecnicos apenas suas tarefas e relatórios de desempenho."  
         },
         {
+          type: "section",
+          title: "Criando Serviços e Atividades"
+        },
+        {
           type: "image",
-          src: "src/assets/projects/check-trampo/imagem-03.png",
+          src: "src/assets/projects/check-trampo/imagem-09.png",
+          caption: "Tela de criação de serviços e atividades"
+        },
+        {
+          type: "text",
+          value: "A tela acima demonstra a seleção do cliente para o qual o serviço será criado, a definição do nome do serviço e a criação de atividades relacionadas a cada serviço."
+        },
+        {
+          type: "image",
+          src: "src/assets/projects/check-trampo/imagem-10.png",
+          caption: "Tela de seleção da Solução do novo serviço"
+        },
+        {
+          type: "text",
+          value: "Ao criar um serviço, o gerente tem a opção de selecionar uma solução, onde todos serviços relacionados àquela solução ficam agrupados, facilitando a organização e o acompanhamento das atividades relacionadas a cada solução vendida ao cliente."
+        },
+        {
+          type: "image",
+          src: "src/assets/projects/check-trampo/imagem-11.png",
+          caption: "Tela de criação da atividade"
+        },
+        {
+          type: "text",
+          value: "Na criação das atividades, o administrador ou gerente deve definir o tipo, se é checkbox ou numerico. Sua obrigatóriedade, se é obrigatório para completar a tarefa uma imagem ou o campo de texto preenchido. E por fim, o nome da atividade, sendo possível adicionar uma instrução em PDF para auxiliar o tecnico na realização daquela atividade."
+        },
+        {
+          type: "image",
+          src: "src/assets/projects/check-trampo/imagem-12.png",
+          caption: "Tela de criação do conjunto de tarefas"
+        },
+        {
+          type: "text",
+          value: "Após criar as atividades, o gerente deve informar o numero de vezes que aquela atividade deve ser realizada para completar a tarefa, no exemplo acima temos um projeto de instalação de cameras em 3 andares, onde havera a mesma quantidade de cameras em cada andar, logo definimos 3 conjuntos de tarefas para aquela atividade, onde cada conjunto de tarefas tem a mesma atividade, mas com a necessidade de serem realizadas 3 vezes para completar o serviço."
+        },
+        {
+          type: "image",
+          src: "src/assets/projects/check-trampo/imagem-13.png",
+          caption: "Tela de review do serviço criado"
+        },
+        {
+          type: "text",
+          value: "Na tela de review do serviço, o gerente tem uma visão geral de como aquele serviço ficou, podendo revisar as atividades criadas e os conjuntos de tarefas definidos para cada atividade."
+        },
+        {
+          type: "section",
+          title: "Experiência do Técnico"
+        },
+        {
+          type: "image",
+          src: "src/assets/projects/check-trampo/imagem-04.png",
           caption: "Tela principal do técnico - clientes"
         },
         {
           type: "text",
           value: "A tela principal do técnico apresenta de forma intuitiva os clientes e ao selecionar um cliente, o técnico tem acesso às soluções vendidas a cada cliente." 
+        },
+        {
+          type: "image",
+          src: "src/assets/projects/check-trampo/imagem-05.png",
+          caption: "Tela de soluções vendidas ao cliente"
+        },
+        {
+          type: "text",
+          value: "Ao acessar as soluções vendidas, o técnico tem acesso às atividades relacionadas a cada solução, selecionando a solução onde se encontra o serviço que ele irá realizar."
+        }, 
+        {
+          type: "image",
+          src: "src/assets/projects/check-trampo/imagem-06.png",
+          caption: "Listas de Serviços relacionados à solução"
+        },
+        {
+          type: "text",
+          value: "Lista de serviços relacionados à solução, onde o técnico seleciona o serviço que irá realizar."
+        },
+        {
+          type: "image",
+          src: "src/assets/projects/check-trampo/imagem-07.png",
+          caption: "Tela de atividades relacionadas ao serviço"
+        },
+        {
+          type: "text",
+          value: "Na tela do serviço, o técnico tem acesso às atividades relacionadas a cada serviço, podendo marcar as atividades como concluídas e gerar relatórios de desempenho para cada atividade realizada."
+        },
+        {
+          type: "image",
+          src: "src/assets/projects/check-trampo/imagem-08.png",
+          caption: "Atividade marcada como concluída"
+        },
+        {
+          type: "text",
+          value: "Ao marcar uma atividade como concluída, fica registrado o horário em que aquela atividade foi realizada, sendo possivel adicionar um detalhe escrito e uma foto do serviço."
         }
       ]
     }
+  },
+
+  {
+    id: "Jokenpo Game",
+    title: "Jokenpo Game",
+    category: "Backend",
+    description: "Jogo de jokenpo (pedra, papel, tesoura) desenvolvido em python, meu primeiro projeto, não segue os melhores padrões de desenvolvimento, mas foi essencial para meu aprendizado e evolução como programador, onde aprendi os conceitos básicos de lógica de programação, estruturas de repetição, funções e manipulação de dados.",
   }
 
   // Adicione mais projetos seguindo o mesmo padrão...
