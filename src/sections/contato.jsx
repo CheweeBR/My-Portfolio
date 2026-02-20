@@ -22,14 +22,14 @@ export default function Contato() {
       >
         {/* Header centralizado */}
         <motion.div variants={itemVariants} className="text-center">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight leading-tight">
+          <h2 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tight leading-tight">
             Vamos construir algo <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">
               incrível juntos?
             </span>
           </h2>
 
-          <p className="text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="text-slate-400 text-lg leading-relaxed max-w-1xl mx-auto">
             Seja para um projeto de <strong className="text-slate-200">IoT</strong>, uma aplicação{" "}
             <strong className="text-slate-200">Full Stack</strong> ou apenas para trocar uma ideia
             sobre tecnologia.

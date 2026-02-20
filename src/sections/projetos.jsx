@@ -41,7 +41,7 @@ export default function Projetos() {
   }
 
   return (
-    <section id="projetos" className="w-full py-20 md:py-2">
+    <section id="projetos" className="w-full py-5 md:py-2">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         {/* Header */}
         {!modalOpen && (
@@ -53,7 +53,7 @@ export default function Projetos() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl m-1 font-black text-white tracking-tight text-center"
+            className="text-3xl md:text-5xl py-2 md:py-6 font-black text-white tracking-tight text-center"
           >
             Meus{" "}
             <span className="bg-gradient-to-r from-green-500 to-emerald-400 bg-clip-text text-transparent">

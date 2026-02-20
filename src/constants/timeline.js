@@ -1,5 +1,4 @@
 // src/constants/timeline.js
-// Esquema de cores e variantes de animação da Timeline
 
 // ==========================================
 // ESQUEMA DE CORES
@@ -71,6 +70,17 @@ export const colorSchemes = {
     gradient: "bg-gradient-to-b from-yellow-500 to-amber-500",
     ring: "ring-yellow-500/50",
     hex: "#eab308"
+  },
+  cyan: {
+    from: "from-cyan-400",
+    to: "to-blue-500",
+    text: "text-cyan-400",
+    bg: "bg-cyan-500/10",
+    border: "border-cyan-500/30",
+    glow: "shadow-lg shadow-cyan-500/20",
+    gradient: "bg-gradient-to-b from-cyan-400 to-blue-500",
+    ring: "ring-cyan-500/50",
+    hex: "#22d3ee"
   }
 };
 

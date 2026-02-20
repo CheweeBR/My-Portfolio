@@ -1,10 +1,13 @@
 // src/data/projectsData.js
 // Dados dos projetos com estrutura de blocos dinâmicos
 
+import { details, title } from "framer-motion/client";
+
 export const projectCategoryColors = {
   "Todos": { hex: "#22c55e", bg: "bg-green-500/10", text: "text-green-300" },
   "Web Full Stack": { hex: "#60a5fa", bg: "bg-blue-500/10", text: "text-blue-300" },
   "IoT & Integrações": { hex: "#a78bfa", bg: "bg-violet-500/10", text: "text-violet-300" },
+  "Backend": { hex: "#fbbf24", bg: "bg-yellow-500/10", text: "text-yellow-300" },
 };
 
 export const projectsData = [
@@ -262,11 +265,34 @@ export const projectsData = [
   },
 
   {
-    id: "Jokenpo Game",
-    title: "Jokenpo Game",
-    category: "Backend",
-    description: "Jogo de jokenpo (pedra, papel, tesoura) desenvolvido em python, meu primeiro projeto, não segue os melhores padrões de desenvolvimento, mas foi essencial para meu aprendizado e evolução como programador, onde aprendi os conceitos básicos de lógica de programação, estruturas de repetição, funções e manipulação de dados.",
-  }
+    "id": "jokenpo-game",
+    "title": "Jokenpo Game",
+    "category": "Backend",
+    "description": "Meu marco inicial na programação: um script em Python focado em lógica estrutural e fluxos de decisão, desenvolvido durante os primeiros passos no estudo de algoritmos.",
+    "tech": ["Python"],
+    "image": "src/assets/projects/jokenpo/imagem-01.png",
+    "links": {
+      "github": "https://github.com/CheweeBR/Jokenpo-python",
+      "live": ""
+    },
+    "featured": false,
+    "details": {
+      "content": [
+        {
+          "type": "text",
+          "value": "Este foi o primeiro projeto da minha trajetória como desenvolvedor, realizado durante o curso de Python do 'Curso em Vídeo'. O foco central foi a aplicação prática de algoritmos estruturais, lidando com o fluxo completo de uma aplicação de terminal: entrada de dados, processamento de regras de negócio e saída visual formatada."
+        },
+        {
+          "type": "image",
+          "src": "src/assets/projects/jokenpo/gif-01.gif",
+          "caption": "Interface CLI com cores ANSI e sistema de placar"
+        },
+        {
+          "type": "text",
+          "value": "Tecnicamente, o script explora o uso intensivo de estruturas de repetição (while) e condicionais aninhadas (if/elif/else) para gerenciar o estado do jogo e do placar. Além da lógica do Jokenpô, implementei manipulação de bibliotecas nativas como 'os' para controle de interface, 'time' para animações de loading, e 'random' para a inteligência da CPU, demonstrando a base necessária para a construção de fluxos de software funcionais."
+        }
+      ]
+    }
+  },
 
-  // Adicione mais projetos seguindo o mesmo padrão...
 ];

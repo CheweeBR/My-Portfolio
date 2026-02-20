@@ -5,7 +5,8 @@ import {
   MountainIcon,
   CompassIcon,
   RocketIcon,
-  CrownIcon
+  CrownIcon,
+  RadarIcon
 } from '../components/Timeline/icons';
 
 export const timelineData = [
@@ -75,7 +76,7 @@ export const timelineData = [
   {
     year: "2025",
     phase: "A Consolidação",
-    title: "Desenvolvedor Jr. & Líder de Equipe",
+    title: "Desenvolvedor & Líder de Equipe",
     quote: '"O fim de um ciclo, o início do legado"',
     // Atualizado com a colação de grau [cite: 75] e os novos cargos informados pelo usuário
     story: "Um ano de marcos definitivos. Colação de grau oficial como Tecnólogo em ADS pela UTFPR em março. Profissionalmente, fui efetivado como Desenvolvedor Júnior e assumi o desafio de Líder de Equipe na Comando Soluções, unindo a gestão técnica com a arquitetura de novas soluções.",
@@ -83,5 +84,17 @@ export const timelineData = [
     color: "gold",
     emotion: "Liderança • Formatura",
     milestone: "Graduado & Líder Técnico"
-  }
+  },
+  {
+    year: "2026",
+    phase: "A Nova Jornada",
+    title: "Em Busca de Novos Horizontes",
+    quote: '"O futuro pertence àqueles que acreditam na beleza de seus sonhos"',
+    story: "Com a conclusão de um ciclo intenso e vitorioso como líder técnico, decidi abrir as portas para novas oportunidades. Estou focado em aplicar minha experiência Full Stack e IoT em projetos desafiadores, buscando ambientes que respirem inovação e onde eu possa continuar transformando café em soluções de alto impacto.",
+    icon: RadarIcon,
+    color: "cyan",
+    emotion: "Abertura • Propósito",
+    milestone: "Open to Work",
+    highlight: "Disponível para Projetos"
+  },
 ];

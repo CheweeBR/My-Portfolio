@@ -14,13 +14,12 @@ function Footer({ activeTab, onTabChange, sections }) {
   
   return (
     <motion.footer 
-      // Adicionei 'relative' aqui para o posicionamento absoluto funcionar
       className="w-full h-16 bg-black/80 backdrop-blur-md border-t border-white/10 flex items-center justify-between px-6 md:px-12 text-xs text-zinc-500 overflow-hidden relative"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
     >
-        {/* Esquerda: Tech Stack (Escondido em mobile) */}
+
         <div className="hidden md:flex gap-3 opacity-60 w-1/3">
             {["React", "Framer", "Tailwind"].map((tech, i) => (
               <span key={tech} className="cursor-default hover:text-green-400 transition-colors">
@@ -28,12 +27,6 @@ function Footer({ activeTab, onTabChange, sections }) {
               </span>
             ))}
         </div>
-
-        {/* CENTRO: NAVEGAÇÃO POR BOLINHAS 
-           Truque CSS: 
-           - Mobile: absolute + left-1/2 + -translate-x-1/2 (Centraliza forçado ignorando os vizinhos)
-           - Desktop (md): static + translate-x-0 (Volta ao fluxo normal do flexbox)
-        */}
         <div className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:w-1/3 flex justify-center items-center gap-4 z-10">
             {sections.map((section) => {
                 const isActive = activeTab === section;
@@ -57,10 +50,6 @@ function Footer({ activeTab, onTabChange, sections }) {
             })}
         </div>
 
-        {/* Direita: Links Sociais 
-            - Adicionei 'ml-auto' para garantir que fiquem na direita no mobile
-            - Adicionei 'z-20' para garantir que sejam clicáveis e fiquem acima de qualquer coisa
-        */}
         <div className="flex items-center gap-4 justify-end md:w-1/3 ml-auto z-20 relative">
             <motion.a 
               href="https://github.com/SEU_USER" 
