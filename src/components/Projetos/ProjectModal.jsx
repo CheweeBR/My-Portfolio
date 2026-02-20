@@ -140,16 +140,17 @@ export default function ProjectModal({ open, onClose, project }) {
                   }
                   if (block.type === "image") {
                     return (
-                      <button
+                      <a
                         key={i}
-                        type="button"
-                        onClick={() => setLightboxSrc(block.src)}
-                        className="block w-full text-left"
+                        href={block.src}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full"
                       >
                         <div className="rounded-xl overflow-hidden border border-white/10 hover:border-white/20 transition">
                           <ImageBlock src={block.src} caption={block.caption} />
                         </div>
-                      </button>
+                      </a>
                     );
                   }
 

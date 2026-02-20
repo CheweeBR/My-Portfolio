@@ -19,7 +19,7 @@ export const projectsData = [
     // === DADOS DO CARD (sempre visível na home) ===
     description: "Sistema completo para gestão de edifícios, permitindo acionamento remoto de hardware (luzes, exaustores, ar-condicionado) e monitoramento de nivel de caixa d'agua.",
     tech: ["React", "Vite", "Node-RED", "MQTT", "Raspberry Pi"],
-    image: "src/assets/projects/sap/imagem-02.png",
+    image: "/assets/projects/sap/imagem-02.png",
     
     links: {
       github: "",
@@ -36,7 +36,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "src/assets/projects/sap/imagem-01.png",
+          src: "/assets/projects/sap/imagem-01.png",
           caption: "Tela de login do sistema"
         },
         {
@@ -53,7 +53,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "src/assets/projects/sap/imagem-02.png",
+          src: "/assets/projects/sap/imagem-02.png",
           caption: "Tela de acionamentos de iluminação"
         },
         {
@@ -62,7 +62,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "src/assets/projects/sap/imagem-03.png",
+          src: "/assets/projects/sap/imagem-03.png",
           caption: "Tela de acionamento de exaustores"
         },
         {
@@ -71,12 +71,12 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "src/assets/projects/sap/imagem-04.png",
+          src: "/assets/projects/sap/imagem-04.png",
           caption: "Tela de seleção de ambiente para ar-condicionado"
         },
         {
           type: "image",
-          src: "src/assets/projects/sap/imagem-04.1.png",
+          src: "/assets/projects/sap/imagem-04.1.png",
           caption: "Tela de acionamento de ar-condicionado"
         },
         {
@@ -85,7 +85,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "src/assets/projects/sap/imagem-05.png",
+          src: "/assets/projects/sap/imagem-05.png",
           caption: "Tela de agendamento diário de exaustores e iluminação"
         },
         {
@@ -94,7 +94,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "src/assets/projects/sap/imagem-06.png",
+          src: "/assets/projects/sap/imagem-06.png",
           caption: "Tela de monitoramento de alarme de caixa d'água"
         },
         {
@@ -103,7 +103,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "src/assets/projects/sap/imagem-07.png",
+          src: "/assets/projects/sap/imagem-07.png",
           caption: "Relatórios e Logs"
         },
         {
@@ -120,7 +120,7 @@ export const projectsData = [
     category: "Web Full Stack",
     description: "Plataforma de gerenciamento de tarefas e acompanhamento de atividades para equipes de trabalho presencial, gerando relatórios de produtividade e desempenho e podendo definir metas de atividades.",
     tech: ["React", "Vite", "Node.js", "NestJS", "PostgreSQL", "TypeScript"],
-    image: "src/assets/projects/check-trampo/imagem-02.png",
+    image: "/assets/projects/check-trampo/imagem-02.png",
     links: {
       live: "https://check-trampo.com/",
       github: "",
@@ -134,7 +134,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "src/assets/projects/check-trampo/imagem-01.png",
+          src: "/assets/projects/check-trampo/imagem-01.png",
           caption: "Tela de login"
         },
         {
@@ -147,7 +147,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "src/assets/projects/check-trampo/imagem-02.png",
+          src: "/assets/projects/check-trampo/imagem-02.png",
           caption: "Dashboard administrativo"
         },
         {
@@ -168,7 +168,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "src/assets/projects/check-trampo/imagem-09.png",
+          src: "/assets/projects/check-trampo/imagem-09.png",
           caption: "Tela de criação de serviços e atividades"
         },
         {
@@ -177,7 +177,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "src/assets/projects/check-trampo/imagem-10.png",
+          src: "/assets/projects/check-trampo/imagem-10.png",
           caption: "Tela de seleção da Solução do novo serviço"
         },
         {
@@ -186,7 +186,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "src/assets/projects/check-trampo/imagem-11.png",
+          src: "/assets/projects/check-trampo/imagem-11.png",
           caption: "Tela de criação da atividade"
         },
         {
@@ -195,7 +195,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "src/assets/projects/check-trampo/imagem-12.png",
+          src: "/assets/projects/check-trampo/imagem-12.png",
           caption: "Tela de criação do conjunto de tarefas"
         },
         {
@@ -204,7 +204,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "src/assets/projects/check-trampo/imagem-13.png",
+          src: "/assets/projects/check-trampo/imagem-13.png",
           caption: "Tela de review do serviço criado"
         },
         {
@@ -217,7 +217,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "src/assets/projects/check-trampo/imagem-04.png",
+          src: "/assets/projects/check-trampo/imagem-04.png",
           caption: "Tela principal do técnico - clientes"
         },
         {
@@ -226,7 +226,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "src/assets/projects/check-trampo/imagem-05.png",
+          src: "/assets/projects/check-trampo/imagem-05.png",
           caption: "Tela de soluções vendidas ao cliente"
         },
         {
@@ -235,7 +235,7 @@ export const projectsData = [
         }, 
         {
           type: "image",
-          src: "src/assets/projects/check-trampo/imagem-06.png",
+          src: "/assets/projects/check-trampo/imagem-06.png",
           caption: "Listas de Serviços relacionados à solução"
         },
         {
@@ -244,7 +244,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "src/assets/projects/check-trampo/imagem-07.png",
+          src: "/assets/projects/check-trampo/imagem-07.png",
           caption: "Tela de atividades relacionadas ao serviço"
         },
         {
@@ -253,7 +253,7 @@ export const projectsData = [
         },
         {
           type: "image",
-          src: "src/assets/projects/check-trampo/imagem-08.png",
+          src: "/assets/projects/check-trampo/imagem-08.png",
           caption: "Atividade marcada como concluída"
         },
         {
@@ -270,7 +270,7 @@ export const projectsData = [
     "category": "Backend",
     "description": "Meu marco inicial na programação: um script em Python focado em lógica estrutural e fluxos de decisão, desenvolvido durante os primeiros passos no estudo de algoritmos.",
     "tech": ["Python"],
-    "image": "src/assets/projects/jokenpo/imagem-01.png",
+    "image": "/assets/projects/jokenpo/imagem-01.png",
     "links": {
       "github": "https://github.com/CheweeBR/Jokenpo-python",
       "live": ""
@@ -279,17 +279,17 @@ export const projectsData = [
     "details": {
       "content": [
         {
-          "type": "text",
-          "value": "Este foi o primeiro projeto da minha trajetória como desenvolvedor, realizado durante o curso de Python do 'Curso em Vídeo'. O foco central foi a aplicação prática de algoritmos estruturais, lidando com o fluxo completo de uma aplicação de terminal: entrada de dados, processamento de regras de negócio e saída visual formatada."
+          type: "text",
+          value: "Este foi o primeiro projeto da minha trajetória como desenvolvedor, realizado durante o curso de Python do 'Curso em Vídeo'. O foco central foi a aplicação prática de algoritmos estruturais, lidando com o fluxo completo de uma aplicação de terminal: entrada de dados, processamento de regras de negócio e saída visual formatada."
         },
         {
-          "type": "image",
-          "src": "src/assets/projects/jokenpo/gif-01.gif",
-          "caption": "Interface CLI com cores ANSI e sistema de placar"
+          type: "image",
+          src: "/assets/projects/jokenpo/gif-01.gif",
+          caption: "Video demonstrativo da interface CLI"
         },
         {
-          "type": "text",
-          "value": "Tecnicamente, o script explora o uso intensivo de estruturas de repetição (while) e condicionais aninhadas (if/elif/else) para gerenciar o estado do jogo e do placar. Além da lógica do Jokenpô, implementei manipulação de bibliotecas nativas como 'os' para controle de interface, 'time' para animações de loading, e 'random' para a inteligência da CPU, demonstrando a base necessária para a construção de fluxos de software funcionais."
+          type: "text",
+          value: "Tecnicamente, o script explora o uso intensivo de estruturas de repetição (while) e condicionais aninhadas (if/elif/else) para gerenciar o estado do jogo e do placar. Além da lógica do Jokenpô, implementei manipulação de bibliotecas nativas como 'os' para controle de interface, 'time' para animações de loading, e 'random' para a inteligência da CPU, demonstrando a base necessária para a construção de fluxos de software funcionais."
         }
       ]
     }
