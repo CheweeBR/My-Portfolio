@@ -1,5 +1,4 @@
 // src/components/Contato/InputGroup.jsx
-// Campo de input reutilizável com label e animação
 
 import { motion } from 'framer-motion';
 

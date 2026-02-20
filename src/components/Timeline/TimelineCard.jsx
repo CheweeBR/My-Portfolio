@@ -23,7 +23,7 @@ const TimelineCard = ({ item, isHovered, colors }) => {
           : `0 10px 30px -10px rgba(0, 0, 0, 0.3), 0 0 20px ${colors.hex}15`
       }}
     >
-      {/* Animated Glow Background */}
+
       <motion.div
         animate={{
           opacity: isHovered ? 0.15 : 0,
@@ -35,8 +35,7 @@ const TimelineCard = ({ item, isHovered, colors }) => {
           background: `linear-gradient(to bottom right, ${colors.hex}, ${colors.hex}80)` 
         }}
       />
-      
-      {/* Shine Effect on Hover */}
+
       <motion.div
         initial={{ x: '-100%', opacity: 0 }}
         animate={isHovered ? { x: '200%', opacity: 0.1 } : { x: '-100%', opacity: 0 }}
@@ -44,9 +43,8 @@ const TimelineCard = ({ item, isHovered, colors }) => {
         className="absolute inset-0 w-1/2 bg-gradient-to-r from-transparent via-white to-transparent skew-x-12"
       />
 
-      {/* Content */}
       <div className="relative z-10">
-        {/* Phase Badge */}
+
         <motion.span
           initial={{ x: -20, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -73,7 +71,6 @@ const TimelineCard = ({ item, isHovered, colors }) => {
           {item.title}
         </motion.h3>
 
-        {/* Quote */}
         <motion.blockquote 
           initial={{ opacity: 0, x: -10 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -85,7 +82,6 @@ const TimelineCard = ({ item, isHovered, colors }) => {
           {item.quote}
         </motion.blockquote>
 
-        {/* Story */}
         <motion.p 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -96,7 +92,6 @@ const TimelineCard = ({ item, isHovered, colors }) => {
           {item.story}
         </motion.p>
 
-        {/* Emotion + Milestone */}
         <motion.div 
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -113,7 +108,6 @@ const TimelineCard = ({ item, isHovered, colors }) => {
           </span>
         </motion.div>
 
-        {/* Highlight */}
         {item.highlight && (
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}

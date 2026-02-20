@@ -50,7 +50,7 @@ export default function ProjectModal({ open, onClose, project }) {
           exit={{ opacity: 0, scale: 0.98, y: 12 }}
           className="relative w-full max-w-5xl bg-zinc-950 border border-white/10 rounded-2xl overflow-hidden flex flex-col"
         >
-          {/* Header */}
+
           <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
             <div className="min-w-0">
               <h3 className="text-xl font-bold text-white truncate">{project.title}</h3>
@@ -65,11 +65,9 @@ export default function ProjectModal({ open, onClose, project }) {
             </button>
           </div>
 
-          {/* Content */}
           <div className="flex-1 min-h-0 flex flex-col overflow-hidden">
 
-            
-            {/* Sidebar - Dados do Card */}
+ 
             <div className="lg:border-r border-white/10 p-5 space-y-4 overflow-y-auto">
               {project.image && (
                 <img
@@ -127,8 +125,6 @@ export default function ProjectModal({ open, onClose, project }) {
               </div>
             </div>
 
-            {/* Main - Detalhes do Projeto */}
-
             <div id="detalhes" className="p-5 border-t border-white/10">
               <h3 className="text-xl font-bold text-white">Detalhes do Projeto</h3>
             </div>
@@ -165,7 +161,6 @@ export default function ProjectModal({ open, onClose, project }) {
             </div>
           </div>
 
-          {/* Lightbox */}
           <AnimatePresence>
             {lightboxSrc && (
               <motion.div

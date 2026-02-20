@@ -1,5 +1,4 @@
 // src/components/Contato/SubmitButton.jsx
-// Botão de envio com estados animados (idle, sending, success)
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { Spinner, IconSuccess, StaticPlane, FlyingPlane } from './icons';
@@ -33,7 +32,6 @@ const SubmitButton = ({ status }) => {
       `}
     >
       <AnimatePresence mode='wait'>
-        {/* Estado: Idle */}
         {status === 'idle' && (
           <motion.div 
             key="idle"
@@ -47,7 +45,6 @@ const SubmitButton = ({ status }) => {
           </motion.div>
         )}
 
-        {/* Estado: Enviando */}
         {status === 'sending' && (
           <motion.div 
             key="sending"
@@ -61,8 +58,7 @@ const SubmitButton = ({ status }) => {
             <Spinner />
           </motion.div>
         )}
-
-        {/* Estado: Sucesso */}
+        
         {status === 'success' && (
           <motion.div 
             key="success"

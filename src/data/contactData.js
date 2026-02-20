@@ -1,5 +1,4 @@
 // src/data/contactData.js
-// Dados de contato e redes sociais
 
 import {
   IconWhatsApp,

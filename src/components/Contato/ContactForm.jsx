@@ -14,10 +14,8 @@ const ContactForm = () => {
     e.preventDefault();
     setFormStatus('sending');
     
-    // Simulando envio
     setTimeout(() => {
       setFormStatus('success');
-      // Reset após sucesso
       setTimeout(() => setFormStatus('idle'), 3000);
     }, 2000);
   };
@@ -27,7 +25,6 @@ const ContactForm = () => {
       variants={itemVariants}
       className="bg-zinc-900/80 border border-white/10 p-6 md:p-8 rounded-3xl relative overflow-hidden shadow-2xl shadow-black/50"
     >
-      {/* Brilho decorativo animado */}
       <motion.div 
         className="absolute top-0 right-0 w-80 h-80 bg-green-500/10 rounded-full blur-[100px] pointer-events-none -mr-20 -mt-20" 
         animate={{ 
@@ -46,7 +43,6 @@ const ContactForm = () => {
           Envie um email direto
         </h3>
         
-        {/* Nome e Email */}
         <div className="grid grid-cols-2 gap-4">
           <InputGroup 
             label="Nome" 
@@ -60,22 +56,19 @@ const ContactForm = () => {
           />
         </div>
 
-        {/* Assunto */}
         <InputGroup 
           label="Assunto" 
           type="text" 
           placeholder="Projeto, Dúvida ou Café?" 
         />
         
-        {/* Mensagem */}
         <InputGroup 
           label="Mensagem" 
           isTextarea 
           rows={4}
           placeholder="Escreva sua mensagem aqui..." 
         />
-
-        {/* Botão de Envio */}
+        
         <SubmitButton status={formStatus} />
       </form>
     </motion.div>

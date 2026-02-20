@@ -32,7 +32,7 @@ const ProjectCard = ({ project, isHovered, onHoverStart, onHoverEnd, colors, onO
           : `0 10px 30px -10px rgba(0, 0, 0, 0.3), 0 0 20px ${colors.hex}15`,
       }}
     >
-      {/* Glow */}
+
       <motion.div
         animate={{ opacity: isHovered ? 0.18 : 0, scale: isHovered ? 1.2 : 1 }}
         transition={{ duration: 0.5 }}
@@ -40,7 +40,6 @@ const ProjectCard = ({ project, isHovered, onHoverStart, onHoverEnd, colors, onO
         style={{ background: `linear-gradient(to bottom right, ${colors.hex}, ${colors.hex}80)` }}
       />
 
-      {/* Shine */}
       <motion.div
         initial={{ x: "-120%", opacity: 0 }}
         animate={isHovered ? { x: "220%", opacity: 0.1 } : { x: "-120%", opacity: 0 }}
@@ -49,7 +48,7 @@ const ProjectCard = ({ project, isHovered, onHoverStart, onHoverEnd, colors, onO
       />
 
       <div className="relative z-10">
-        {/* Thumb */}
+
         <div className="relative h-44 md:h-48 overflow-hidden">
           {hasImage ? (
             <motion.img
@@ -62,7 +61,7 @@ const ProjectCard = ({ project, isHovered, onHoverStart, onHoverEnd, colors, onO
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-zinc-950/60">
-              {/* Placeholder com leve animação */}
+
               <motion.div
                 initial={{ opacity: 0, y: 6 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -90,7 +89,6 @@ const ProjectCard = ({ project, isHovered, onHoverStart, onHoverEnd, colors, onO
 
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
 
-          {/* Category badge */}
           <div className="absolute top-4 left-4">
             <span
               className={`
@@ -104,7 +102,6 @@ const ProjectCard = ({ project, isHovered, onHoverStart, onHoverEnd, colors, onO
           </div>
         </div>
 
-        {/* Body */}
         <div className="p-6 md:p-7">
           <motion.h3
             initial={{ opacity: 0, y: 10 }}
@@ -126,7 +123,6 @@ const ProjectCard = ({ project, isHovered, onHoverStart, onHoverEnd, colors, onO
             {project.description}
           </motion.p>
 
-          {/* Tech tags */}
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -144,7 +140,6 @@ const ProjectCard = ({ project, isHovered, onHoverStart, onHoverEnd, colors, onO
             ))}
           </motion.div>
 
-          {/* Actions */}
           <div
             className="flex flex-wrap items-center gap-2 mt-5"
             onClick={(e) => e.stopPropagation()}
